@@ -8,12 +8,14 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 
+app.use('/api/highscore', require('./controllers/highscore'));
+
 // Mongoose stuff
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/hackathon');
 
 app.get('/', function(req, res) {
-  res.render('Hi!');
+  res.send('Hi!');
 });
 
 app.listen(3000);
