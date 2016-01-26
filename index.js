@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 
 app.use('/api/highscore', require('./controllers/highscore'));
+app.use('/user', require('./controllers/user'));
 
 // Mongoose stuff
 var mongoose = require('mongoose');
