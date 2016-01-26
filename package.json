@@ -1,0 +1,25 @@
+{
+  "name": "wdi-angular-hackathon",
+  "version": "1.0.0",
+  "description": "MEAN stack app for hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srobertson421/WDI-Angular-Hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srobertson421/WDI-Angular-Hackathon/issues"
+  },
+  "homepage": "https://github.com/srobertson421/WDI-Angular-Hackathon#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "mongoose": "^4.3.7",
+    "request": "^2.67.0"
+  }
+}
