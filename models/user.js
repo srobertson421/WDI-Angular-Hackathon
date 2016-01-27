@@ -4,7 +4,7 @@ var Highscore = require('./highscore');
 var userSchema = new mongoose.Schema({
   email: String,
   password: String,
-  highScores: [Highscore.schema]
+  highScores: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Highscore' }]
 });
 
 var User = mongoose.model('User', userSchema);

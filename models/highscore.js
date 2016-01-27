@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 // create a schema
 var highscoreSchema = new mongoose.Schema({
+  _creator: {type: Number, ref: 'User'},
   initials: String,
   score: Number,
   created_at: Date,

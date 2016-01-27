@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="gameApp">
+  <head>
+    <title>Hackathon Game</title>
+    <base href="/">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <!-- angular cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
+    <!-- Phaser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.4.4/phaser.js"></script>
+    <!-- js script -->
+    <script src="app/app.js"></script>
+    <script src="app/services/services.js"></script>
+    <script src="app/game/game.js"></script>
+  </head>
+
+  <body class="text-center">
+    <h4 ng-if="$root.user">
+      Welcome {{$root.user.email}}
+    </h4>
+    <h4 ng-if="!$root.user">
+      Please <a href="/login">Login</a> or <a href="/signup">Signup</a>
+    </h4>
+    <div id="game"></div>
+    <div class="container">
+      <ng-view></ng-view>
+    </div>
+  </body>
+</html>

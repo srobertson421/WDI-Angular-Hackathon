@@ -12,9 +12,19 @@ router.post('/signup', function(req, res) {
 router.post('/login', function(req, res) {
   User.findOne({email: req.body.email}, function(err, user) {
     if (err) return res.status(401).send(err);
-    res.status(200).send(user);
+
+    if (user.password === req.body.password) {
+      res.status(200).send(user);
+    } else {
+      res.status(404).send('Invalid Password or User not found!');
+    }
   });
 });
 
+router.put('/:id', function(req, res) {
+  User.findOne({email: req.body.email}, function(err, user) {
+    
+  });
+});
 
 module.exports = router;
